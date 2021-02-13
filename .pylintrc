@@ -1,0 +1,20 @@
+[MESSAGE CONTROL]
+disable=no-name-in-module,
+        unsubscriptable-object,
+        missing-module-docstring,
+        missing-class-docstring,
+        too-few-public-methods,
+        redefined-outer-name
+
+[BASIC]
+argument-naming-style=snake_case
+attr-naming-style=snake_case
+class-naming-style=PascalCase
+class-attribute-naming-style=any
+const-naming-style=UPPER_CASE
+function-naming-style=snake_case
+inlinevar-naming-style=snake_case
+method-naming-style=snake_case
+
+[FORMAT]
+max-line-length=100
