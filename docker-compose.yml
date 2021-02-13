@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+
+  db:
+    image: "mariadb:10"
+    volumes:
+      - "../instock_database:/var/lib/mysql"
+    ports:
+      - "3360:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "upstream0password"
