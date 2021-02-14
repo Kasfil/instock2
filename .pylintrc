@@ -4,7 +4,8 @@ disable=no-name-in-module,
         missing-module-docstring,
         missing-class-docstring,
         too-few-public-methods,
-        redefined-outer-name
+        redefined-outer-name,
+        relative-beyond-top-level
 
 [BASIC]
 argument-naming-style=snake_case
