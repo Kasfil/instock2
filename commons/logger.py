@@ -1,4 +1,5 @@
 import logging
+import logging.config
 from datetime import date
 from app.configs import configs
 
@@ -26,10 +27,10 @@ logging_config = {
     },
     'filters': {
         'debug_true': {
-            '()': 'OnDebugTrue'
+            '()': OnDebugTrue
         },
         'debug_false': {
-            '()': 'OnDebugFalse'
+            '()': OnDebugFalse
         }
     },
     'handlers': {
@@ -42,10 +43,10 @@ logging_config = {
         'file': {
             'level': 'WARNING',
             'filters': ['debug_false'],
-            'class': 'logging.RotatingFileHandler',
+            'class': 'logging.handlers.RotatingFileHandler',
             # should be in root/logs directory
             # filename should be month-date-year.txt
-            'filename': 'logs/' + date.today().strftime('%b-%d-%Y') + '.txt',
+            'filename': 'logs/' + date.today().strftime('%b-%d-%Y') + '.log',
             'maxBytes': 1024
         }
     },
@@ -63,4 +64,5 @@ logging_config = {
 
 # setup logging instance
 def setup_logger():
+    """setup logger"""
     logging.config.dictConfig(logging_config)
